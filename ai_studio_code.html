@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For Pooja ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Premium Fonts: Elegant serif for headings, clean sans-serif for text -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source id="audioSource" src="sad.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        
+        <!-- Scene 1: The Hook -->
+        <div class="scene active" id="scene1">
+            <h1>Dear Pooja,</h1>
+            <p>Sometimes, we let our ego get so loud that we can't hear the people who are fighting for us.</p>
+            <p>I let my stubbornness blind me, and I ended up hurting you.</p>
+            <button class="btn" onclick="nextScene(1)">Continue</button>
+        </div>
+
+        <!-- Scene 2: The Confession -->
+        <div class="scene" id="scene2">
+            <p>You tried your best to build a bridge, and I kept throwing excuses. Your friends tried to help, but I was stuck in my own head.</p>
+            <p>That "closure" I took? It wasn't closure. It was cowardice. I ran away instead of facing my mistakes.</p>
+            <button class="btn" onclick="nextScene(2)">Next</button>
+        </div>
+
+        <!-- Scene 3: The Punishment Game -->
+        <div class="scene" id="scene3">
+            <h2>I know a simple "sorry" isn't enough.</h2>
+            <p>You probably want to punch me right now. Honestly, I deserve it.</p>
+            <p>So... here is your chance. Smash my ego to proceed.</p>
+            
+            <div class="game-area">
+                <div class="health-bar-container">
+                    <div class="health-bar" id="egoBar">100% EGO</div>
+                </div>
+                <!-- Add a cute angry sticker if you want -->
+                <img src="sticker.gif" onerror="this.style.display='none'" class="game-sticker">
+                <button class="punish-btn" id="punchBtn" onclick="punchKartikey()">Punch Kartikey 🥊</button>
+            </div>
+        </div>
+
+        <!-- Scene 4: The Real Apology -->
+        <div class="scene" id="scene4">
+            <p>Ego destroyed. Sense restored.</p>
+            <p>Moongfali, a world without you is just empty. I promise to listen, to drop the walls, and to never let my pride hurt us again.</p>
+            <p>Will you please forgive this idiot?</p>
+            <div class="buttons">
+                <button class="btn yes-btn" onclick="forgiven()">Yes, I forgive you ❤️</button>
+                <button class="btn no-btn" id="noBtn">No</button>
+            </div>
+        </div>
+
+        <!-- Scene 5: Happy Ending -->
+        <div class="scene" id="scene5">
+            <h1 class="happy-title">Thank you, Moongfali. ✨</h1>
+            <p>I owe you a massive apology date, endless listening, and zero excuses.</p>
+            <p>I love you.</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
